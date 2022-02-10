@@ -491,7 +491,7 @@ class NHITS(pl.LightningModule):
                  loss_train,
                  loss_hypar,
                  loss_valid,
-                 frequency,
+                 frequency="D",
                  random_seed):
         """
         N-HiTS model.
@@ -566,7 +566,8 @@ class NHITS(pl.LightningModule):
                 Validation loss.
                 An item from ['MAPE', 'MASE', 'SMAPE', 'RMSE', 'MAE', 'QUANTILE'].
             frequency: str
-                Time series frequency.
+                Time series frequency. This is fed into pandas.date_range, so freqstr or DateOffset.
+                Default: "D" for daily.
             random_seed: int
                 random_seed for pseudo random pytorch initializer and
                 numpy random generator.
