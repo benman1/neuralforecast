@@ -517,7 +517,7 @@ class NHITS(pl.LightningModule):
                 An item from ['orthogonal', 'he_uniform', 'glorot_uniform', 'glorot_normal', 'lecun_normal'].
             stack_types: List[str]
                 List of stack types.
-                Subset from ['seasonality', 'trend', 'identity', 'exogenous', 'exogenous_tcn', 'exogenous_wavenet'].
+                Subset from ['identity', 'exogenous', 'exogenous_tcn', 'exogenous_wavenet'].
             n_blocks: List[int]
                 Number of blocks for each stack.
                 Note that len(n_blocks) = len(stack_types).
